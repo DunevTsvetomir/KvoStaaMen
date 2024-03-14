@@ -1,6 +1,6 @@
 .earth {
-    width: 300px;
-    height: 300px;
+    width: 750px;
+    height: 750px;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -27,7 +27,7 @@
     width: 200%;
     height: 100%;
     animation: spin 30s linear alternate infinite;
-    background: url(https://www.mapsinternational.co.uk/pub/media/catalog/product/x/s/a/satellite-map-of-the-world_wm00875.jpg);
+    background: url(../textures/earth.png);
    
     background-size: cover;
   }
