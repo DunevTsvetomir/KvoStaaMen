@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 800px;
     right: 0;
     margin: auto;
     overflow: hidden;
@@ -32,7 +32,14 @@
     background-size: cover;
   }
   @keyframes spin {
-    to {
-      transform: translateX(-50%);
-    }
   }
+
+  .info > div {
+    width: 550px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 0 15px #000 inset, 0 0 0 2px #000;
+    background-color: rgb(34, 33, 33);
+}
