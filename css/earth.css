@@ -85,7 +85,7 @@
     color: #FFF;
     text-decoration: none;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
   }
   ul li ul.dropdown li{
     display: block;
@@ -105,10 +105,8 @@
   }
 
 
-
   .tab {
     overflow: hidden;
-    border: 1px solid #9a9595;
     background-color: #5b5757;
   }
   
