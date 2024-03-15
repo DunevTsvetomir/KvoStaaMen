@@ -31,13 +31,11 @@
       background-size: cover;
     }
 
-
     @keyframes spin {
-      to {
+      from {
         transform: translateX(-50%);
       }
     }
-
     
     .info > div {
       width: 600px;
