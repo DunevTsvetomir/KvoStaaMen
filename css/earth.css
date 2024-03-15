@@ -2,7 +2,7 @@
       width: 650px;
       height: 650px;
       position: fixed;
-      top: 150px;
+      top: 70px;
       bottom: 0;
       left: 700px;
       right: 0;
@@ -43,7 +43,7 @@
       position: fixed;
       left: 0;
       top: 0;
-      background: radial-gradient(ellipse at bottom, #7a7d81 0%,#090a0f 100%);
+      background: radial-gradient(ellipse at left, #161717 0%,#0e0909 100%);
       /* background-color: rgb(36, 35, 35);
       color: white; */
       padding: 20px;
@@ -73,7 +73,7 @@
   ul {
     list-style: none;
     background-color: rgb(36, 35, 35);;
-    width: 150px;
+    width: 145px;
   }
   ul li {
     display: inline-block;
