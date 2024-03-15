@@ -7,11 +7,23 @@
 <style>
 
 body  {
-  background-image: url(../textures/stars1.png);
+  background-image: url(https://www.psdgraphics.com/file/stars.jpg);
   background-color: #000000;
 }
-
+button {
+  background-color: #4b504e;
+  border: none;
+  color: rgb(227, 223, 223);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+}
 </style>
+
+
 
 </head>
 
@@ -22,34 +34,82 @@ body  {
   </div>
 
   <div class="info">
-    <div>
-        <p>This is the text content that will appear on the black area.</p>
-    </div>
 </div>
 
-  
   <div class="info">
+   <div class="tab">
     <div>
-      <button class="tablinks" onclick="openCity(event, 'tih')">Тихи океан</button>
-      <button class="tablinks" onclick="openCity(event, 'atl')">Атлантически океан</button>
-      <button class="tablinks" onclick="openCity(event, 'in')">Индийски океан</button>
-      <button class="tablinks" onclick="openCity(event, 'sl')">Северен Ледовит океан</button>
-      <button class="tablinks" onclick="openCity(event, 'jl')">Южен океан</button>
+        <button class="tablinks" onclick="openCity(event, 'tih')">Тих океан</button>
+        <button class="tablinks" onclick="openCity(event, 'atl')">Атлантически океан</button>
+        <button class="tablinks" onclick="openCity(event, 'ind')">Индийски океан</button>
+        <button class="tablinks" onclick="openCity(event, 'slo')">Северно ледовид океан</button>
+        <button class="tablinks" onclick="openCity(event, 'so')">Южен океан</button>
+      </div>
+      
+      <div id="tih" class="tabcontent">
+        <h3>Tих океан</h3>
+        <p>Той се простира от Арктическия океан на север до Южния океан на юг и омива бреговете на много континенти и острови, включително Азия, Австралия, Южна и Северна Америка, и много други. Тихият океан заема огромна част от Земната повърхност, като покрива около третина от цялата площ на планетата.
+          Животните които обитават Тихия океан са различни видове риби, морски костенурки и китове, сред които най-характерен е гърбатият кит. Тихия океан е характерен също и със своите коралови рифове.</p>
+      </div>
+      
+      <div id="atl" class="tabcontent">
+        <h3>Атлантически океан</h3>
+        <p>Той се простира от Арктическия до Антарктическия региони, омивайки бреговете на много континенти, включително Северна и Южна Америка, Европа и Африка. Океанът включва известни морета като Средиземно, Карибско, Балтийско и други.
+          В Атлантическия океан живее голямо разнообразие от риби, китове, делфини, морски костенурки както и множество крайбрежни птици. Освен това там живеят и Атлантическия тун и Атлантическия бален кит, които са силно застрашени от изчезване.</p>
+      </div>
+      
+      <div id="ind" class="tabcontent">
+        <h3>Индийски океан</h3>
+        <p>Той включва разнообразие от морета, заливи и острови, като залива Бенгалски, Арабския залив, Красно море и други. Индийският океан е известен с богатото си разнообразие от животински и растителни видове, както и с множеството културни и исторически атракции в региона.
+          В Индийския океан живеят различни видове риби, медузи, китове, делфини и др. Освен тях в Индийския океан живее Зелената костенурка, която е застрашена.</p>
+      </div>
+      
+      <div id="slo" class="tabcontent">
+        <h3>Северно ледовид океан</h3>
+        <p>Той се състои от простиращи се над северния полюс води, които са покрити с лед през голяма част от годината. Този регион е известен със своите екстремни условия на студ и непрекъснати ледени покриви, които правят достъпа до него труден.
+          Животните, които живеят в Северния океан са адаптирани към студения климат. Например белуги, поларни мечки, тюлени и други. </p>
+      </div>
+
+      <div id="so" class="tabcontent">
+        <h3>Южен океан</h3>
+        <p> Намира се в южната част на планетата. Той се омива от бреговете на множество континенти и острови, включително Антарктида, Австралия, Южна Америка и Африка. Южният океан също така включва различни морски региони като Южно Китайско, Южно Японско и други.
+          В Южния океан живеят пингвини, китове, тюлени и др.</p>
+      </div>
     </div>
 </div>
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
+
+
+
 
 <div class="container">
 <ul>
+  <li><a href="#">Home</a></li>
   <li>
-    <a href="#">Location pins</a>
+    <a href="#">brrrrrrrr</a>
     <ul class="dropdown">
-      <li><a href="#">Red pin: </a></li>
-      <li><a href="#">Yellow pin: </a></li>
-      <li><a href="#">Green pin: </a></li>
-      <li><a href="#">Black pin: </a></li>
-      <li><a href="#">Orange pin: </a></li>
+      <li><a href="#">a</a></li>
+      <li><a href="#">b</a></li>
+      <li><a href="#">c</a></li>
+      <li><a href="#">d</a></li>
     </ul>
   </li>
+  <li><a href="#">About Us</a></li>
+  <li><a href="#">Contact Us</a></li>
 </ul>
 </div>
 
