@@ -2,8 +2,16 @@
 <html>
 <head>
 <link rel="stylesheet" href="../css/earth.css">
+<title>EarthMain</title>
+
 
 <style>
+p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
 body  {
   background-image: url(../textures/stars1.png);
   background-color: #000000;
@@ -18,7 +26,7 @@ button {
   font-size: 16px;
   border-radius: 12px;
 }
-#toggleButton {
+#oceanToSeaButton,#seaToOceanButton {
   background-color: #2c3e50;
   color: white;
   border: none;
@@ -45,103 +53,124 @@ button {
 </div>
 
 <div class="info">
-  <div class="tab">
+  <div class="tab" id="ocean" style="display: block;">
     <div>
       <button class="tablinks" onclick="openCity(event, 'tih')">Тих океан</button>
-      <div id="tihText" class="tabcontent">
+      <div id="tihText" class="tabcontent city">
         <h3>Тих океан</h3>
         <p>Той се простира от Арктическия океан на север до Южния океан на юг и омива бреговете на много континенти и острови, включително Азия, Австралия, Южна и Северна Америка, и много други. Тихият океан заема огромна част от Земната повърхност, като покрива около третина от цялата площ на планетата.
           Животните които обитават Тихия океан са различни видове риби, морски костенурки и китове, сред които най-характерен е гърбатият кит. Тихият океан е характерен също и със своите коралови рифове.</p>
       </div>
       <button class="tablinks" onclick="openCity(event, 'atl')">Атлантически океан</button>
-      <div id="atlText" class="tabcontent">
+      <div id="atlText" class="tabcontent city">
         <h3>Атлантически океан</h3>
         <p>Той се простира от Арктическия до Антарктическия региони, омивайки бреговете на много континенти, включително Северна и Южна Америка, Европа и Африка. Океанът включва известни морета като Средиземно, Карибско, Балтийско и други.
           В Атлантическия океан живее голямо разнообразие от риби, китове, делфини, морски костенурки както и множество крайбрежни птици. Освен това там живеят и Атлантическия тун и Атлантическия бален кит, които са силно застрашени от изчезване.</p>
       </div>
       <button class="tablinks" onclick="openCity(event, 'ind')">Индийски океан</button>
-      <div id="indText" class="tabcontent">
+      <div id="indText" class="tabcontent city">
         <h3>Индийски океан</h3>
         <p>Той включва разнообразие от морета, заливи и острови, като залива Бенгалски, Арабския залив, Красно море и други. Индийският океан е известен с богатото си разнообразие от животински и растителни видове, както и с множеството културни и исторически атракции в региона.
           В Индийския океан живеят различни видове риби, медузи, китове, делфини и др. Освен тях в Индийския океан живее Зелената костенурка, която е застрашена.</p>
       </div>
       <button class="tablinks" onclick="openCity(event, 'slo')">Северно ледовид океан</button>
-      <div id="sloText" class="tabcontent">
+      <div id="sloText" class="tabcontent city">
         <h3>Северно ледовид океан</h3>
         <p>Той се състои от простиращи се над северния полюс води, които са покрити с лед през голяма част от годината. Този регион е известен със своите екстремни условия на студ и непрекъснати ледени покриви, които правят достъпа до него труден.
           Животните, които живеят в Северния океан са адаптирани към студения климат. Например белуги, поларни мечки, тюлени и други. </p>
       </div>
       <button class="tablinks" onclick="openCity(event, 'so')">Южен океан</button>
-      <div id="soText" class="tabcontent">
+      <div id="soText" class="tabcontent city">
         <h3>Южен океан</h3>
         <p> Намира се в южната част на планетата. Той се омива от бреговете на множество континенти и острови, включително Антарктида, Австралия, Южна Америка и Африка. Южният океан също така включва различни морски региони като Южно Китайско, Южно Японско и други.
           В Южния океан живеят пингвини, китове, тюлени и др.</p>
       </div>
-      <button id="toggleButton" onclick="toggleOcean()">Ocean to Sea</button>
+      <button id="oceanToSeaButton" onclick="showSea()">Ocean to Sea</button>
     </div>
+    <br>
+    <hr>
+    <br>
+          <p>Location pins</p>
+          <a href="../html/trench.html" ><button> Червен точка: Марианска падина</button></a>
+          <a href="" ><button class="tablinks" >Зелен точка: Бермудски триъгълник</button></a>
+          <button href="file:../Users/admin/KvoStaaMen1/KvoStaaMen/html/trench.html" class="tablinks">Жълта точка: Титаник</button>
+          <button href="file:../Users/admin/KvoStaaMen1/KvoStaaMen/html/trench.html" class="tablinks">Оранжева точка: Големия Коралов риф</button>
+      <div class="tabcontent" id="c">
+        <h3>Океани</h3>
+        <p id="oceanText">Тук може да добавите съдържанието, което искате да се показва при кликване на бутона "Ocean to Sea".</p>
+      </div>
   </div>
 
-  <div class="tabcontent" id="c">
-    <h3>Океани</h3>
-    <p id="oceanText">Тук може да добавите съдържанието, което искате да се показва при кликване на бутона "Ocean to Sea".</p>
-  </div>
-  <div id="sea" class="tabcontent" style="display:none;">
-    <h3>Морета в Европа</h3>
-    <p>
-      Най-важните морета в Европа са:
-      <ul>
-        <li>Средиземно море</li>
-        <li>Черно море</li>
-        <li>Балтийско море</li>
-      </ul>
-    </p>
-    <button id="backToOceansButton" onclick="openCity(event, 'c')">Back to Oceans</button>
+  <div id="sea" class="tab" style="display:none;">
+    <h3>Морета</h3>
+      <button class="tablinks" onclick="openCity(event, 'med')">Средиземно море</button>
+      <div id="medText" class="tabcontent city">
+        <h3>Средиземно море</h3>
+        <p>Средиземно море е един от най-иконичните региони в света, обединяващ разнообразие от култури, история и биоразнообразие. Географското разположение на Средиземно море е разположено между Европа, Африка и Азия. То се свързва с Атлантическия океан чрез Гибралтарския проток на запад и с Черно море чрез Дарданелския и Босфорския протоки на изток. Средиземно море е дом на огромно разнообразие от животни и растения. Сред най-характерните видове са различни видове риби като тон, скумрия, лаврак и много други. Освен риби, в региона се срещат и други морски организми като китове, делфини, морски костенурки и дребни морски безгръбначни. В Средиземно море има различни коралови рифове, които представляват важни екосистеми за морската фауна и флора.</p>
+      </div>
+      
+      <button class="tablinks" onclick="openCity(event, 'black')">Черно море</button>
+      <div id="blackText" class="tabcontent city">
+        <h3>Черно море</h3>
+        <p>Черно море е едно от най-големите вътрешни морета в света и се намира между Югоизточна Европа и Мала Азия. Той е свързан с Егейско море чрез Мраморно море и със Средиземно море чрез протоци на Босфора и Дарданелите. В Черно море се срещат много различни видове морски организми, включително риби, медузи, крабове, ракообразни и много други. Сред характерните видове са ромбова риба, морска пъстърва, калкан и скумрия. Въпреки че Черно море няма големи коралови рифове като в тропическите региони, то съдържа множество малки коралови патки, които са важни за морската фауна и флора.</p>
+      </div>
+      
+      <button class="tablinks" onclick="openCity(event, 'baltic')">Балтийско море</button>
+      <div id="balticText" class="tabcontent city">
+        <h3>Балтийско море</h3>
+        <p>Балтийско море е най-голямото солено средиземноморие на света, разположено в Северна Европа, около 1,600 километра северно от средиземноморския регион. Въпреки че е относително малко по размери, Балтийско море е богато на културно и природно наследство. Mорето е уникално поради своята соленост, която е по-ниска в сравнение с океанските води. Това го прави на изключително подходящо място за развитие на специфични видове растения и животни. В него се срещат разнообразни видове морски организми, включително риби, медузи, крабове, ракообразни и морски птици. Сред характерните видове са шаран, щука, сьомга, скумрия и много други.</p>
+      </div>
+      
+      <button class="tablinks" onclick="openCity(event, 'caribbean')">Карибско море</button>
+      <div id="caribbeanText" class="tabcontent city">
+        <h3>Карибско море</h3>
+        <p>Карибско море е един от най-красивите и екзотични региони в света, известен с бели плажове, топли туркуазени води и богатство от морски видове. Карибско море се намира между островите на Карибския басейн, включително островите на Големите Антили, Малките Антили и Багамските острови. То граничи с Атлантическия океан на североизток и с Източната Централноамериканска платформа на югозапад. Морето е известно с някои от най-големите и най-разнообразните коралови рифове в света. Тези рифове създават уникални екосистеми, дом на разнообразие от корали, риби, черупкодребни и други морски организми. Освен това, Карибските острови, които се намират в морето, предлагат прекрасни плажове, луксозни курорти и богатство от културни забележителности.</p>
+      </div>
+      
+      <button class="tablinks" onclick="openCity(event, 'japanese')">Японско море</button>
+      <div id="japaneseText" class="tabcontent city">
+        <h3>Японско море</h3>
+        <p>Японското море е морска област, разположена между Япония на изток, Корейския полуостров на запад и Русия на север. То е част от западната част на Тихия океан и е около 1,000 километра  широко и 2,500 километра дълго. Морето е дом на разнообразие от морски видове, включително различни видове риби, китове, делфини, морски костенурки и много други. Риболовът е важна част от икономиката и културата на региона. Множество острови се намират в Японското море, като някои от тях са част от Япония, Корея и Русия. Някои от най-известните острови включват Хоншу, Шикоку и Кюшу на Япония, както и острови от Руското далечно източно и Корейския полуостров.Също така Японското море е важен маршрут за търговията и промишлеността, свързващ Япония с други азиатски страни. Пристанищата в региона играят важна роля за вноса и износа на стоки, както и за промишлените дейности като съдостроене и риболов.</p>
+      </div>
+      
+      <button class="tablinks" onclick="openCity(event, 'red')">Червено море</button>
+      <div id="redText" class="tabcontent city">
+        <h3>Червено море</h3>
+        <p>Червено море е уникален и изключително важен морски регион, разположен между Африка и Арабския полуостров. То се простира на около 2,250 километра в дължина и е едно от най-топлите и най-солените морета в света. Червеното море е богато на разнообразие от морски организми, включително корали, риби, медузи, морски костенурки и много други. Кораловите рифове в региона са дом на множество видове морски животни и представляват едни от най-красивите подводни екосистеми в света. Морето е свързано с Индийския океан чрез Баб-ел-Мандеб, морски проток между Йемен и Джибути. То също така има връзки с Средиземно море чрез Суецкия канал на север и с Персийския залив чрез Аденския залив на юг.</p>
+      </div>
+    <button id="seaToOceanButton" onclick="showOcean()">Back to Oceans</button>
   </div>
 </div>
 
-<div class="container">
-<ul>
-  <li>
-    <a href="#">Location pins</a>
-    <ul class="dropdown">
-      <li><a href="#">Червен точка: Марианска падина</a></li>
-      <li><a href="#">Зелен точка: Бермудски триъгълник</a></li>
-      <li><a href="#">Жълта точка: Титаник</a></li>
-      <li><a href="#">Оранжева точка: Големия Коралов риф</a></li>
-    </ul>
-  </li>
-</ul>
-</div>
+
 
 <script>
 function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  var i;
+  var cities = document.getElementsByClassName("city");
+  for (i = 0; i < cities.length; i++) {
+    cities[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tablinks");
+  var tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].classList.remove("active");
   }
   document.getElementById(cityName + "Text").style.display = "block";
-  evt.currentTarget.className += " active";
+  evt.currentTarget.classList.add("active");
 }
 
-function toggleOcean() {
-  var oceanContent = document.getElementById("oceanText");
-  var seaContent = document.getElementById("sea");
-  var toggleButton = document.getElementById("toggleButton");
-  
-  if (oceanContent.style.display === "none") {
-    oceanContent.style.display = "block";
-    seaContent.style.display = "none";
-    toggleButton.innerHTML = "Sea to Ocean";
-  } else {
-    oceanContent.style.display = "none";
-    seaContent.style.display = "block";
-    toggleButton.innerHTML = "Ocean to Sea";
-  }
+function showOcean() {
+  var ocean = document.getElementById("ocean");
+  var sea = document.getElementById("sea");
+  ocean.style.display = "block";
+  sea.style.display = "none";
+}
+
+function showSea() {
+  var ocean = document.getElementById("ocean");
+  var sea = document.getElementById("sea");
+  ocean.style.display = "none";
+  sea.style.display = "block";
 }
 </script>
 
