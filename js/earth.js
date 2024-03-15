@@ -1,4 +1,4 @@
-function openCity(evt, cityName) {
+  function openCity(evt, cityName) {
     var i;
     var cities = document.getElementsByClassName("city");
     for (i = 0; i < cities.length; i++) {
