@@ -27,7 +27,7 @@
       width: 400%;
       height: 100%;
       animation: spin 40s linear infinite;
-      background: url(../textures/earth\ -\ 2.1.png);
+      background: url(../textures/earth\ -\ 2.3.png);
       background-size: cover;
     }
 
@@ -64,47 +64,6 @@
     align-items: center;
   }
 
-  *{
-    padding: 0;
-    margin: 0;
-    font-family: monospace;
-  }
-
-  ul {
-    list-style: none;
-    background-color: rgb(36, 35, 35);;
-    width: 145px;
-  }
-  ul li {
-    display: inline-block;
-    position: relative;
-  }
-  ul li a {
-    display: block;
-    padding: 20px 25px;
-    color: #FFF;
-    text-decoration: none;
-    text-align: center;
-    font-size: 18px;
-  }
-  ul li ul.dropdown li{
-    display: block;
-  }
-  ul li ul.dropdown {
-    width: 100%;
-    background-color: rgb(36, 35, 35);;
-    position: absolute;
-    z-index: 999;
-    display: none;
-  }
-  ul li a:hover{
-    background-color: rgb(62, 59, 59);;
-  }
-  ul li:hover ul.dropdown {
-    display: block;
-  }
-
-
   .tab {
     overflow: hidden;
     background-color: #5b5757;
@@ -138,3 +97,5 @@
     border: none;
     border-top: none;
   }
+
+
