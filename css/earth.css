@@ -24,12 +24,13 @@
     }
     
     .earth > div {
-      width: 200%;
+      width: 400%;
       height: 100%;
-      animation: spin 30s linear alternate infinite;
-      background: url(../textures/earth.png);
+      animation: spin 40s linear infinite;
+      background: url(../textures/earth\ -\ 2.1.png);
       background-size: cover;
     }
+    
 
 
 
