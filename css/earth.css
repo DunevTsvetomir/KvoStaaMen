@@ -84,10 +84,6 @@ background-color: #656060;
 }
 
 
-.tab button.active {
-background-color: #656060;
-}
-
 .tabcontent {
 color: white;
 font-family: Arial, Helvetica, sans-serif;
