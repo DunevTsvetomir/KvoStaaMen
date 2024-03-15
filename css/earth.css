@@ -2,7 +2,7 @@
       width: 650px;
       height: 650px;
       position: fixed;
-      top: 70px;
+      top: 0;
       bottom: 0;
       left: 700px;
       right: 0;
@@ -44,8 +44,6 @@
       left: 0;
       top: 0;
       background: radial-gradient(ellipse at left, #161717 0%,#0e0909 100%);
-      /* background-color: rgb(36, 35, 35);
-      color: white; */
       padding: 20px;
       font-size: 22px;
       line-height: 1.5;
@@ -98,5 +96,3 @@
     border: none;
     border-top: none;
   }
-
-
