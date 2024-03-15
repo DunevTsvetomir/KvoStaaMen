@@ -2,54 +2,9 @@
 <html>
 <head>
 <link rel="stylesheet" href="../css/earth.css">
+<script src="../js/earth.js"></script>
 <title>EarthMain</title>
 
-
-<style>
-
-body  {
-  background-image: url(../textures/stars1.png);
-  background-color: #000000;
-}
-
-button {
-  background-color: #4b504e;
-  color: rgb(227, 223, 223);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 22px;
-  border-radius: 12px;
-}
-#oceanToSeaButton,#seaToOceanButton {
-  background-color: #2c3e50;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 22px;
-}
-.tabcontent {
-  display: none;
-}
-.tablinks {
-  display: block;
-  margin-bottom: 10px;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.locations {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 22px;
-}
-
-</style>
 </head>
 <body>
 
@@ -137,7 +92,7 @@ button {
       <button class="tablinks" onclick="openCity(event, 'caribbean')">Карибско море</button>
       <div id="caribbeanText" class="tabcontent city">
         <h3>Карибско море</h3>
-        <p>Карибско море е един от най-красивите и екзотични региони в света, известен с бели плажове, топли туркуазени води и богатство от морски видове. Карибско море се намира между островите на Карибския басейн, включително островите на Големите Антили, Малките Антили и Багамските острови. То граничи с Атлантическия океан на североизток и с Източната Централноамериканска платформа на югозапад. Морето е известно с някои от най-големите и най-разнообразните коралови рифове в света. Тези рифове създават уникални екосистеми, дом на разнообразие от корали, риби, черупкодребни и други морски организми. Освен това, Карибските острови, които се намират в морето, предлагат прекрасни плажове, луксозни курорти и богатство от културни забележителности.</p>
+        <p>Карибско море е един от най-красивите и екзотичнирегиони в света, известен с бели плажове, топли туркуазени води и богатство от морски видове. Карибско море се намира между островите на Карибския басейн, включително островите на Големите Антили, Малките Антили и Багамските острови. То граничи с Атлантическия океан на североизток и с Източната Централноамериканска платформа на югозапад. Морето е известно с някои от най-големите и най-разнообразните коралови рифове в света. Тези рифове създават уникални екосистеми, дом на разнообразие от корали, риби, черупкодребни и други морски организми. Освен това, Карибските острови, които се намират в морето, предлагат прекрасни плажове, луксозни курорти и богатство от културни забележителности.</p>
         <br>
       </div>
       <button class="tablinks" onclick="openCity(event, 'japanese')">Японско море</button>
@@ -158,37 +113,6 @@ button {
   </div>
 </div>
 
-
-
-<script>
-function openCity(evt, cityName) {
-  var i;
-  var cities = document.getElementsByClassName("city");
-  for (i = 0; i < cities.length; i++) {
-    cities[i].style.display = "none";
-  }
-  var tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.remove("active");
-  }
-  document.getElementById(cityName + "Text").style.display = "block";
-  evt.currentTarget.classList.add("active");
-}
-
-function showOcean() {
-  var ocean = document.getElementById("ocean");
-  var sea = document.getElementById("sea");
-  ocean.style.display = "block";
-  sea.style.display = "none";
-}
-
-function showSea() {
-  var ocean = document.getElementById("ocean");
-  var sea = document.getElementById("sea");
-  ocean.style.display = "none";
-  sea.style.display = "block";
-}
-</script>
 
 </body>
 </html>
