@@ -55,7 +55,8 @@ transition: 0.3s;
 
 
 .tab button:hover {
-background-color: #656060;
+  background-image: url('./textures/stars_pro.jpg');
+  background-color: #656060;
 }
 
 
@@ -70,6 +71,7 @@ border-top: none;
 
 body  {
 background-color: #000000;
+
 }
 
 button {
