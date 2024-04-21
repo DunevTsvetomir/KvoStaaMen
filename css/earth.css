@@ -1,40 +1,15 @@
 .earth {
-  width: 650px;
-  height: 650px;
-  position: fixed;
   top: 0;
   bottom: 0;
   left: 700px;
   right: 0;
   margin: auto;
-  overflow: hidden;
-  border-radius: 50%;
-  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
 }
 
-.earth:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  box-shadow: -20px -20px 50px 2px #000 inset;
-  border-radius: 50%;
-}
-
-.earth > div {
-  width: 400%;
-  height: 100%;
-  animation: spin 40s linear infinite;
-  background: url(../textures/earth\ -\ 2.5.png);
-  background-size: cover;
-}
-
-@keyframes spin {
-  from {
-    transform: translateX(-50%);
-  }
+.spline-design {
+  height: 1100px;
+  width: 2000px;
+  margin-left: 500px;
 }
 
 .info > div {
@@ -94,7 +69,6 @@ border-top: none;
 }
 
 body  {
-background-image: url(../textures/stars1.png);
 background-color: #000000;
 }
 
